@@ -44,7 +44,7 @@ const FlagContainer = () => {
   };
   return (
     <>
-      <div className="w-100 p-2 mt-2 flag-container top-border">
+      <div className="w-100 p-2 mt-2 pt-4 flag-container top-border">
         {flags.map((item, index) => {
           return (
             <div
@@ -52,7 +52,7 @@ const FlagContainer = () => {
               key={index}
               onClick={() => verify(item)}
             >
-              <img src={item.image} alt={item.code} />
+              <img src={item.file_url} alt={item.code} />
             </div>
           );
         })}

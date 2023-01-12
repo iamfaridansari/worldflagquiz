@@ -26,7 +26,7 @@ const Introduction = () => {
             <option value="100">100</option>
             <option value="150">150</option>
             <option value="200">200</option>
-            <option value="260">260</option>
+            <option value="238">238</option>
           </select>
           <div className="mt-3">
             <Link to="/game" onClick={getFlags} className="button rounded">

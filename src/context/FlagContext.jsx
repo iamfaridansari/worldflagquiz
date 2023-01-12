@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import data from "../data/data.js";
 const FlagContext = createContext();
 
 const FlagContextProvider = ({ children }) => {
@@ -16,20 +17,25 @@ const FlagContextProvider = ({ children }) => {
   //
   const getFlags = async () => {
     setStarted(true);
-    try {
-      const res = await fetch(
-        "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/index.json"
-      );
-      const data = await res.json();
-      if (res.status === 200) {
-        const temp = data.map((item) => {
-          return { ...item, answered: false };
-        });
-        setFlags(rearrangeFlags(temp).splice(0, limit));
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    const temp = data.map((item) => {
+      return { ...item, answered: false };
+    });
+    setFlags(rearrangeFlags(temp).splice(0, limit));
+    // 
+    // try {
+    //   const res = await fetch(
+    //     "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/index.json"
+    //   );
+    //   const data = await res.json();
+    //   if (res.status === 200) {
+    //     const temp = data.map((item) => {
+    //       return { ...item, answered: false };
+    //     });
+    //     setFlags(rearrangeFlags(temp).splice(0, limit));
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
   //
   const rearrangeFlags = (temp) => {

@@ -55,10 +55,10 @@ h2 {
 }
 .flag-container {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
+  gap: 25px;
 }
 a:hover {
   color: #fff;
