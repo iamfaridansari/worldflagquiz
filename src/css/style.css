@@ -4,13 +4,23 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --black: #00000085;
+  --white: #ffffff85;
+  --border: 1px solid var(--white);
+  --transition: all 0.5s linear;
+}
 html {
   scroll-behavior: smooth;
 }
 body {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   overflow-x: hidden;
+  background: linear-gradient(135deg, var(--black), var(--black)),
+    url(../images/bg1.jpg) center no-repeat;
+  background-size: cover;
 }
 img {
   width: 100%;
@@ -33,7 +43,7 @@ option {
   padding: 0;
   margin: 0;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   font-family: "Lexend", sans-serif;
 }
@@ -50,11 +60,41 @@ h2 {
   justify-content: space-between;
   gap: 8px;
 }
+a:hover {
+  color: #fff;
+}
 .flag-container .flag {
   cursor: pointer;
+  transition: var(--transition);
 }
 .flag-container .flag.answered {
   cursor: auto;
   opacity: 0.5;
   pointer-events: none;
+}
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #00000085;
+  padding: 5px 10px;
+  border: var(--border);
+}
+.input option {
+  background: #000;
+}
+.button {
+  border: none;
+  outline: none;
+  background: #00000085;
+  padding: 5px 10px;
+  border: var(--border);
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.button:hover {
+  background: #000;
+}
+.top-border {
+  border-top: var(--border);
 }

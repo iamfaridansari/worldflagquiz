@@ -13,33 +13,39 @@ const Result = () => {
   }, []);
   //
   return (
-    <div className="container p-2">
-      <div className="row align-items-center justify-content-center my-sm-4 mx-auto">
-        <div className="col-lg-4 col-md-5 col-sm-6 text-center border rounded p-2 px-sm-4">
-          <h1 className="text-capitalize">World flag quiz</h1>
-          <div className="my-2">
-            <p>
-              Score :{" "}
-              <strong className="fs-5">
-                {score} / {limit}
-              </strong>
-            </p>
-            <p>
-              Accuracy :{" "}
-              <strong className="fs-5">
-                {Math.round((score / attempt) * 100)}%
-              </strong>
-            </p>
-          </div>
-          <Link
-            to="/"
-            onClick={restartGame}
-            className="btn btn-primary bg-gradient"
-          >
-            Restart game
-          </Link>
+    <div className="container text-center p-2 py-sm-4">
+      <h1 className="text-capitalize">World flag quiz</h1>
+      <div className="row align-items-center justify-content-center my-4 gap-md-0 gap-2">
+        <div className="col-md">
+          <p>
+            Score :{" "}
+            <strong className="fs-5">
+              {score} / {limit}
+            </strong>
+          </p>
+        </div>
+        <div className="col-md">
+          <p>
+            Attempts : <strong className="fs-5">{attempt}</strong>
+          </p>
+        </div>
+        <div className="col-md">
+          <p>
+            Accuracy :{" "}
+            <strong className="fs-5">
+              {Math.round((score / attempt) * 100)}%
+            </strong>
+          </p>
+        </div>
+        <div className="col-md">
+          <p>
+            Timestamp : <strong className="fs-5">2:47s</strong>
+          </p>
         </div>
       </div>
+      <Link to="/" onClick={restartGame} className="button rounded">
+        Restart game
+      </Link>
     </div>
   );
 };

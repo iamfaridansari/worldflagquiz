@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { FlagContext } from "../context/FlagContext";
-import { BsChevronDoubleRight } from "react-icons/bs";
+import { HiChevronDoubleRight } from "react-icons/hi";
 
 const Navbar = () => {
   const { currentFlag, score, limit, generateFlag } = useContext(FlagContext);
   return (
-    <div className="w-100 border rounded p-2">
+    <div className="w-100 p-2">
       <div className="d-flex align-items-start justify-content-between flex-sm-row flex-column gap-sm-0 gap-2 mb-2">
         <h1 className="text-capitalize">World flag quiz</h1>
         <p>
@@ -17,8 +17,8 @@ const Navbar = () => {
           Click on :{" "}
           <strong className="fs-5">{currentFlag && currentFlag.name}</strong>
         </p>
-        <button className="btn btn-primary bg-gradient" onClick={generateFlag}>
-          Skip <BsChevronDoubleRight />
+        <button className="button rounded" onClick={generateFlag}>
+          Skip <HiChevronDoubleRight />
         </button>
       </div>
     </div>
