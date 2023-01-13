@@ -41,8 +41,11 @@ const Result = () => {
         </div>
         <div className="col-md">
           <p>
-            Timer : {minute < 10 ? "0" + minute : minute}:
-            {second < 10 ? "0" + second : second}s
+            Timer :{" "}
+            <strong className="fs-5">
+              {minute < 10 ? "0" + minute : minute}:
+              {second < 10 ? "0" + second : second}s
+            </strong>
           </p>
         </div>
       </div>

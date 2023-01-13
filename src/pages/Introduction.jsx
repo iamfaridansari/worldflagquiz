@@ -15,7 +15,7 @@ const Introduction = () => {
   return (
     <div className="container p-2">
       <div className="row align-items-center justify-content-center my-sm-4 mx-auto mb-4">
-        <div className="col-lg-4 col-md-5 col-sm-6 text-center p-2 px-sm-4 pb-0">
+        <div className="col-lg-4 col-md-5 col-sm-6 text-center p-0 px-sm-4">
           <h1 className="text-capitalize mb-3">World flag quiz</h1>
           <label>Select the number of flags</label>
           <select

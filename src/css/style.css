@@ -17,7 +17,10 @@ body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  background: linear-gradient(to right, #414141, #000);
+  background: linear-gradient(to right, #41414180, #00000080),
+    url(../images/background.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 img {
   width: 100%;
@@ -99,4 +102,16 @@ a:hover {
 }
 .flag-container .flag img {
   aspect-ratio: 16/9;
+}
+.sticky-bar {
+  position: sticky;
+  top: 8px;
+  left: 0;
+  z-index: 10;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+.sticky-bar.active {
+  background: #000000c5;
+  border: var(--border);
 }

@@ -26,7 +26,7 @@ const FlagContainer = () => {
     }
   }, []);
   //
-  const verify = (item) => {
+  const verify = (e, item) => {
     if (item.name.toLowerCase() === currentFlag.name.toLowerCase()) {
       setScore(score + 1);
       generateFlag();
@@ -52,14 +52,14 @@ const FlagContainer = () => {
             <div
               className={`flag rounded ${item.answered ? "answered" : ""}`}
               key={index}
-              onClick={() => verify(item)}
+              onClick={(e) => verify(e, item)}
             >
               <img src={item.file_url} alt={item.code} />
             </div>
           );
         })}
       </div>
-      <div className="text-center top-border pt-4">
+      <div className="text-center top-border pt-4 pb-3">
         <Link to="/" className="button rounded" onClick={quitGame}>
           Quit game <FaTimes />
         </Link>
