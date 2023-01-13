@@ -15,12 +15,9 @@ html {
 }
 body {
   width: 100%;
-  min-height: 100vh;
   height: auto;
   overflow-x: hidden;
-  background: linear-gradient(135deg, var(--black), var(--black)),
-    url(../images/bg1.jpg) center no-repeat;
-  background-size: cover;
+  background: linear-gradient(to right, #414141, #000);
 }
 img {
   width: 100%;
@@ -53,24 +50,8 @@ h1 {
 h2 {
   font-size: 1.25rem;
 }
-.flag-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 25px;
-}
 a:hover {
   color: #fff;
-}
-.flag-container .flag {
-  cursor: pointer;
-  transition: var(--transition);
-}
-.flag-container .flag.answered {
-  cursor: auto;
-  opacity: 0.5;
-  pointer-events: none;
 }
 .input {
   width: 100%;
@@ -97,4 +78,25 @@ a:hover {
 }
 .top-border {
   border-top: var(--border);
+}
+.flag-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+.flag-container .flag {
+  cursor: pointer;
+  transition: var(--transition);
+  overflow: hidden;
+  border: var(--border);
+}
+.flag-container .flag.answered {
+  cursor: auto;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.flag-container .flag img {
+  aspect-ratio: 16/9;
 }

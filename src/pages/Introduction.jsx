@@ -2,9 +2,16 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FlagContext } from "../context/FlagContext";
 import { FaArrowRight } from "react-icons/fa";
+import { TimerContext } from "../context/TimerContext";
 
 const Introduction = () => {
   const { limit, setLimit, getFlags } = useContext(FlagContext);
+  const { startTimer } = useContext(TimerContext);
+  //
+  const startGame = () => {
+    getFlags();
+    startTimer();
+  };
   return (
     <div className="container p-2">
       <div className="row align-items-center justify-content-center my-sm-4 mx-auto mb-4">
@@ -29,7 +36,7 @@ const Introduction = () => {
             <option value="238">238</option>
           </select>
           <div className="mt-3">
-            <Link to="/game" onClick={getFlags} className="button rounded">
+            <Link to="/game" onClick={startGame} className="button rounded">
               Start game <FaArrowRight />
             </Link>
           </div>

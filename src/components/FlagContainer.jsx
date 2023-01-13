@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FlagContext } from "../context/FlagContext";
 import { FaTimes } from "react-icons/fa";
+import { TimerContext } from "../context/TimerContext";
 
 const FlagContainer = () => {
   const {
@@ -11,11 +12,12 @@ const FlagContainer = () => {
     score,
     setScore,
     generateFlag,
-    started,
     attempt,
     setAttempt,
-    restartGame,
+    quitGame,
   } = useContext(FlagContext);
+  const { started } = useContext(TimerContext);
+  //
   const navigate = useNavigate();
   //
   useEffect(() => {
@@ -44,11 +46,11 @@ const FlagContainer = () => {
   };
   return (
     <>
-      <div className="w-100 p-2 mt-2 pt-4 flag-container top-border">
+      <div className="w-100 mt-4 py-4 flag-container top-border">
         {flags.map((item, index) => {
           return (
             <div
-              className={`flag ${item.answered ? "answered" : ""}`}
+              className={`flag rounded ${item.answered ? "answered" : ""}`}
               key={index}
               onClick={() => verify(item)}
             >
@@ -58,7 +60,7 @@ const FlagContainer = () => {
         })}
       </div>
       <div className="text-center top-border pt-4">
-        <Link to="/" className="button rounded" onClick={restartGame}>
+        <Link to="/" className="button rounded" onClick={quitGame}>
           Quit game <FaTimes />
         </Link>
       </div>

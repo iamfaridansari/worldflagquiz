@@ -1,17 +1,19 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "../data/data.js";
+import { TimerContext } from "./TimerContext.jsx";
 const FlagContext = createContext();
 
 const FlagContextProvider = ({ children }) => {
   const [flags, setFlags] = useState([]);
   const [question, setQuestion] = useState([]);
-  const [started, setStarted] = useState(false);
   const [limit, setLimit] = useState(10);
   const [currentFlag, setCurrentFlag] = useState({});
   const [score, setScore] = useState(0);
   const [attempt, setAttempt] = useState(0);
   const [accuracy, setAccuracy] = useState(0);
+  //
+  const { setStarted, timer, setSecond, setMinute } = useContext(TimerContext);
   //
   const navigate = useNavigate();
   //
@@ -21,21 +23,6 @@ const FlagContextProvider = ({ children }) => {
       return { ...item, answered: false };
     });
     setFlags(rearrangeFlags(temp).splice(0, limit));
-    // 
-    // try {
-    //   const res = await fetch(
-    //     "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/index.json"
-    //   );
-    //   const data = await res.json();
-    //   if (res.status === 200) {
-    //     const temp = data.map((item) => {
-    //       return { ...item, answered: false };
-    //     });
-    //     setFlags(rearrangeFlags(temp).splice(0, limit));
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
   //
   const rearrangeFlags = (temp) => {
@@ -56,6 +43,8 @@ const FlagContextProvider = ({ children }) => {
   const generateFlag = () => {
     if (score === limit) {
       setAccuracy((score / attempt) * 100);
+      setStarted(false);
+      clearInterval(timer);
       navigate("/result", { replace: true });
     } else {
       let random = question[Math.floor(Math.random() * question.length)];
@@ -79,15 +68,19 @@ const FlagContextProvider = ({ children }) => {
     generateFlag();
   }, [question]);
   //
-  const restartGame = () => {
+  const quitGame = () => {
     setFlags([]);
     setQuestion([]);
-    setStarted(false);
     setLimit(10);
     setCurrentFlag({});
     setScore(0);
     setAttempt(0);
     setAccuracy(0);
+    setStarted(false);
+    //
+    setSecond(0);
+    setMinute(0);
+    clearInterval(timer);
   };
   //
   return (
@@ -102,13 +95,11 @@ const FlagContextProvider = ({ children }) => {
         score,
         setScore,
         getFlags,
-        started,
-        setStarted,
         question,
         setQuestion,
         attempt,
         setAttempt,
-        restartGame,
+        quitGame,
       }}
     >
       {children}

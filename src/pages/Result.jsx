@@ -1,13 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FlagContext } from "../context/FlagContext";
+import { TimerContext } from "../context/TimerContext";
 
 const Result = () => {
-  const { started, score, attempt, limit, restartGame } =
-    useContext(FlagContext);
+  const { score, attempt, limit, quitGame } = useContext(FlagContext);
+  const { started, second, minute } = useContext(TimerContext);
+  //
   const navigate = useNavigate();
   useEffect(() => {
-    if (!started) {
+    if (!started && score !== limit) {
       navigate("/", { replace: true });
     }
   }, []);
@@ -39,11 +41,12 @@ const Result = () => {
         </div>
         <div className="col-md">
           <p>
-            Timestamp : <strong className="fs-5">2:47s</strong>
+            Timer : {minute < 10 ? "0" + minute : minute}:
+            {second < 10 ? "0" + second : second}s
           </p>
         </div>
       </div>
-      <Link to="/" onClick={restartGame} className="button rounded">
+      <Link to="/" onClick={quitGame} className="button rounded">
         Restart game
       </Link>
     </div>

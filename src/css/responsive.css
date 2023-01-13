@@ -7,4 +7,13 @@
   .flag-container {
     grid-template-columns: repeat(3, 1fr);
   }
+  .flag-container {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .column-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
 }

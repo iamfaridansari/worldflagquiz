@@ -200,7 +200,7 @@ const data = [
   {
     url: "/wiki/Bolivia",
     alpha3: "BOL",
-    name: "Bolivia (Plurinational State of)",
+    name: "Bolivia",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/b/b3/Bandera_de_Bolivia_%28Estado%29.svg",
     license: "Public domain",
@@ -357,7 +357,7 @@ const data = [
   {
     url: "/wiki/Cocos_(Keeling)_Islands",
     alpha3: "CCK",
-    name: "Cocos (Keeling) Islands",
+    name: "Cocos Islands",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_the_Cocos_%28Keeling%29_Islands.svg",
     license: "Public domain",
@@ -389,7 +389,7 @@ const data = [
   {
     url: "/wiki/Democratic_Republic_of_the_Congo",
     alpha3: "COD",
-    name: "Congo - Democratic Republic of the",
+    name: "Democratic Republic of the Congo",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg",
     license: "Public domain",
@@ -555,7 +555,7 @@ const data = [
   {
     url: "/wiki/Falkland_Islands",
     alpha3: "FLK",
-    name: "Falkland Islands (Malvinas)",
+    name: "Falkland Islands",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_Falkland_Islands.svg",
     license: "Public domain",
@@ -795,7 +795,7 @@ const data = [
   {
     url: "/wiki/Iran",
     alpha3: "IRN",
-    name: "Iran (Islamic Republic of)",
+    name: "Iran",
     file_url: "//upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg",
     license: "Public domain",
   },
@@ -894,7 +894,7 @@ const data = [
   {
     url: "/wiki/North_Korea",
     alpha3: "PRK",
-    name: "Korea (Democratic People's Republic of)",
+    name: "North Korea",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg",
     license: "Public domain",
@@ -902,7 +902,7 @@ const data = [
   {
     url: "/wiki/South_Korea",
     alpha3: "KOR",
-    name: "Korea - Republic of",
+    name: "South Korea",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg",
     license: "Public domain",
@@ -1081,7 +1081,7 @@ const data = [
   {
     url: "/wiki/Federated_States_of_Micronesia",
     alpha3: "FSM",
-    name: "Micronesia (Federated States of)",
+    name: "Micronesia",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg",
     license: "Public domain",
@@ -1089,7 +1089,7 @@ const data = [
   {
     url: "/wiki/Moldova",
     alpha3: "MDA",
-    name: "Moldova - Republic of",
+    name: "Moldova",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
     license: "Public domain",
@@ -1454,7 +1454,7 @@ const data = [
     alpha3: "STP",
     name: "Sao Tome and Principe",
     file_url:
-      "//upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Sao_Tome_and_Principe.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/1920px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png",
     license: "Public domain",
   },
   {
@@ -1500,7 +1500,7 @@ const data = [
   {
     url: "/wiki/Sint_Maarten",
     alpha3: "SXM",
-    name: "Sint Maarten (Dutch part)",
+    name: "Sint Martin (Dutch part)",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Sint_Maarten.svg",
     license: "Public domain",
@@ -1633,7 +1633,7 @@ const data = [
   {
     url: "/wiki/Tanzania",
     alpha3: "TZA",
-    name: "Tanzania - United Republic of",
+    name: "Tanzania",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg",
     license: "Public domain",
@@ -1799,7 +1799,7 @@ const data = [
   {
     url: "/wiki/Venezuela",
     alpha3: "VEN",
-    name: "Venezuela (Bolivarian Republic of)",
+    name: "Venezuela",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Venezuela.svg",
     license: "Public domain",
@@ -1823,7 +1823,7 @@ const data = [
   {
     url: "/wiki/United_States_Virgin_Islands",
     alpha3: "VIR",
-    name: "Virgin Islands (U.S.)",
+    name: "Virgin Islands (US)",
     file_url:
       "//upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_the_United_States_Virgin_Islands.svg",
     license: "Public domain",
