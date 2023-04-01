@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/worldflagquiz/static/css/main.0a6d0788.css",
+    "main.js": "/worldflagquiz/static/js/main.92497711.js",
+    "static/media/background.jpg": "/worldflagquiz/static/media/background.d93bed557adb4013408f.jpg",
+    "index.html": "/worldflagquiz/index.html",
+    "main.0a6d0788.css.map": "/worldflagquiz/static/css/main.0a6d0788.css.map",
+    "main.92497711.js.map": "/worldflagquiz/static/js/main.92497711.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a6d0788.css",
+    "static/js/main.92497711.js"
+  ]
+}
